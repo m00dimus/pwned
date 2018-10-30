@@ -2,7 +2,8 @@
 
 #// Variables
 pretty=True
-sleeptime=1
+sleeptime=10
+outputdir="."
 url="https://haveibeenpwned.com/api/v2/breachedaccount/"
 
 #// functions
@@ -45,7 +46,7 @@ if [ $# -eq 0 ] ; then
   exit 1
 else
 	inputfile=$1
-	outputdir="."
+	
 	if [ $# -eq 2 ] ; then
 		outputdir=$2
 		if [ $(direxist $outputdir) -eq 0 ]; then
